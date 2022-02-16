@@ -1,6 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
 .input-field{
     background-color: #DCDCDC;
+    border: none;
+    
 }
+
 .money-part{
     background-color: #e6e6e6;
+}
+.text{
+    text-align: justify;
+}
+.saving{
+    width: 20%;
+    
+}
+#saving{
+    width: 50%;
+}
+.display{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.btn{
+    color: white;
+    background-color: #0dcaf0;
+}
+.btn:hover{
+    background-color: white;
+    color: aqua;
+}
+
+@media (max-width:700px) {
+    .display{
+        grid-template-columns: 1fr;
+    }
+    .saving{
+        width: 40%;
+    }
 }

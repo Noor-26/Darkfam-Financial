@@ -13,38 +13,42 @@
     <div class="container-fluid">
         <h1 class="text-center mt-5 mb-4">Darkfam Savings</h1>
         <!-- image -->
-        <section class="row ">
-            <div class="col">
-                <img src="money.png" alt="" class="w-100 ps-5 pe-3 py-4">
+        <section class=" display">
+            <div class="">
+                <img src="money.png" alt="" class="img-fluid h-100 ps-2 pe-2 py-4 ps-md-2">
             </div>
-            <div class="col money-part ms-3 me-5 my-4 ">
+
+            <!-- main part -->
+            <div class="money-part ms-3 me-3 my-4 ">
                 <div>
-                    <h2>Income</h2>
-                    <label for="income">income : <input type="number" id="income" placeholder="Enter your Income" class="input-field py-1 px-2"></label>
+                    <h2 class="p-3">Income</h2>
+                    <div class="text-center">
+                        <label for="income" class="">income : <input type="number" id="income" placeholder="Enter your Income" class="input-field py-1 px-2"></label>
+                    </div>
                 </div>
                 <div>
-                    <h2>Expenses</h2>
-                    <div class="row  ">
+                    <h2 class="p-3">Expenses</h2>
+                    <div class="row  text-center text  ">
 
-                        <label for="food-ex">Food : <input type="number" id="food-ex" placeholder="Enter your Food EX" class="input-field py-1 px-2"></label>
+                        <label for="food-ex" class=" my-2 ">Food : <input type="number" id="food-ex" placeholder="Enter your Food EX" class="input-field py-1 px-2 "></label>
     
-                        <label for="rent">Rent : <input type="number" id="rent-ex" placeholder="Enter your rent EX" class="input-field py-1 px-2"></label>
+                        <label for="rent"  class=" my-2 ">Rent : <input type="number" id="rent-ex" placeholder="Enter your rent EX" class="input-field py-1 px-2"></label>
 
-                        <label for="clothes-ex">Clothes : <input type="number" id="income-ex" placeholder="Enter your clothes EX " class="input-field py-1 px-2"></label>
-                        <button class="btn bg-info">Calculate</button>
+                        <label for="clothes-ex" class="my-2">Clothes : <input type="number" id="income-ex" placeholder="Enter your clothes EX " class="input-field py-1 px-2"></label>
+                        <button class="btn  w-auto mx-auto my-3">Calculate</button>
                     </div>
 
-                    <div>
+                    <div class="text-center">
                         <p>Total Expenses: <span id="total-ex">5000</span> </p>
                         <p>Balance: <span id="total-balance">4500</span></p>
                     </div>
 
                     <!-- save section -->
-                    <div>
-                        <label for="saving">Save : <input type="number" id="saving" class="input-field py-1 px-2"></label>
-                        <span>%</span>
-                        <button class="btn">save</button>
-                        <div>
+                    <div class="text-center ">
+                        <label for="saving" class="saving">Save : <input type="number" id="saving" class="input-field py-1 px-2"></label>
+                        <span class="me-2">%</span>
+                        <button class="btn ">save</button>
+                        <div class="mt-3">
                             <p>Saving Amount: <span id="saving-amount">2000</span> </p>
                             <p>Remaining Balance: <span id="balance">2500</span> </p>
                         </div>
