@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE income>
+<income lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="container-fluid">
+        <h1 class="text-center mt-5 mb-4">Darkfam Savings</h1>
+        <!-- image -->
+        <section class="row ">
+            <div class="col">
+                <img src="money.png" alt="" class="w-100 ps-5 pe-3 py-4">
+            </div>
+            <div class="col money-part ms-3 me-5 my-4 ">
+                <div>
+                    <h2>Income</h2>
+                    <label for="income">income : <input type="number" id="income" placeholder="Enter your Income" class="input-field py-1 px-2"></label>
+                </div>
+                <div>
+                    <h2>Expenses</h2>
+                    <div class="row  ">
+
+                        <label for="food-ex">Food : <input type="number" id="food-ex" placeholder="Enter your Food EX" class="input-field py-1 px-2"></label>
     
+                        <label for="rent">Rent : <input type="number" id="rent-ex" placeholder="Enter your rent EX" class="input-field py-1 px-2"></label>
+
+                        <label for="clothes-ex">Clothes : <input type="number" id="income-ex" placeholder="Enter your clothes EX " class="input-field py-1 px-2"></label>
+                        <button class="btn bg-info">Calculate</button>
+                    </div>
+
+                    <div>
+                        <p>Total Expenses: <span id="total-ex">5000</span> </p>
+                        <p>Balance: <span id="total-balance">4500</span></p>
+                    </div>
+
+                    <!-- save section -->
+                    <div>
+                        <label for="saving">Save : <input type="number" id="saving" class="input-field py-1 px-2"></label>
+                        <span>%</span>
+                        <button class="btn">save</button>
+                        <div>
+                            <p>Saving Amount: <span id="saving-amount">2000</span> </p>
+                            <p>Remaining Balance: <span id="balance">2500</span> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     <script src="script.js"></script>
 </body>
-</html>
+</income>
