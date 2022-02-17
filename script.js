@@ -9,16 +9,31 @@ docId('calculate-btn').addEventListener('click', function () {
     const totalExpenses = docId('total-ex')
     const balance = docId('total-balance')
     const warningEx = docId('warning-ex') 
-    let expenses = 0
-
+    
+    // expenses id
+    
     const food = docId('food-ex');
     const rent = docId('rent-ex');
     const clothes = docId('clothes-ex');
+    const expensemoney = document.getElementsByClassName('expense')
+    let expenses = 0
 
-     expenses = parse(food) + parse(rent) + parse(clothes)
+    // error handle
+    for (const expense of expensemoney) {
+        if(expense.value == ''){
+            expense.value = 0
+        }
+    }
+    
+    expenses = parse(food) + parse(rent) + parse(clothes)
     totalExpenses.innerText = expenses
-
+    
     balance.innerText = income.value - expenses
+    
 
-   
+    if (balance.innerText < 0){
+        warningEx.style.display = "block"
+        balance.innerText = 0
+    }
+    
 })
