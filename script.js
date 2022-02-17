@@ -1,6 +1,5 @@
-
-
 const income = docId('income');
+
 docId('calculate-btn').addEventListener('click', function () {
     const totalExpenses = docId('total-ex')
     const warningEx = docId('warning-ex') 
@@ -16,6 +15,7 @@ docId('calculate-btn').addEventListener('click', function () {
     let expenses = 0
 
     // error handle
+
     for (const expense of expensemoney) {
         if(expense.value == ''){
             expense.value = 0
@@ -24,9 +24,13 @@ docId('calculate-btn').addEventListener('click', function () {
        else if( expense.value < 0){
         warningOfNegative.style.display = "block"
         expense.value = 0
+    }
+    else{
+           warningOfNegative.style.display = "none"
        }
     }
     
+    // total expenses calculation
     expenses = parse(food) + parse(rent) + parse(clothes)
     totalExpenses.innerText = expenses
     
@@ -35,6 +39,9 @@ docId('calculate-btn').addEventListener('click', function () {
     if (balance.innerText < 0){
         warningEx.style.display = "block"
         balance.innerText = 0
+    }
+    else{
+        warningEx.style.display = "none"
     }
 })
 
@@ -58,6 +65,9 @@ docId('save-btn').addEventListener('click', function () {
     if (saveAmount > incomeParse) {
         warningOfSave.style.display = "block"
         isSaving.innerText = 0
+    }
+    else{
+        warningOfSave.style.display = "none"
     }
 
     // remaing part
