@@ -4,8 +4,8 @@ function docId (idName){
 function parse(intId){
     return parseFloat(intId.value)
 }
+const income = docId('income');
 docId('calculate-btn').addEventListener('click', function () {
-    const income = docId('income');
     const totalExpenses = docId('total-ex')
     const balance = docId('total-balance')
     const warningEx = docId('warning-ex') 
@@ -34,6 +34,24 @@ docId('calculate-btn').addEventListener('click', function () {
     if (balance.innerText < 0){
         warningEx.style.display = "block"
         balance.innerText = 0
+    }
+    
+})
+
+// savings
+
+docId('save-btn').addEventListener('click', function () {
+    const save = docId('saving')
+    const isSaving = docId('saving-amount')
+    const saveparsent = parse(save)
+    const incomeParse = parse(income)
+    const saveAmount =(incomeParse* saveparsent) / 100
+    isSaving.innerText = saveAmount
+    
+    // error handle of NaN
+
+    if(save.value == ''){
+        isSaving.innerText = 0
     }
     
 })
