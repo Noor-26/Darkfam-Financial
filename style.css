@@ -30,7 +30,7 @@ body{
 }
 .btn:hover{
     background-color: white;
-    color: aqua;
+    color: #0ac5eb;
 }
 
 .text-danger{
