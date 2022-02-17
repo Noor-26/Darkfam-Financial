@@ -9,6 +9,7 @@ docId('calculate-btn').addEventListener('click', function () {
     const totalExpenses = docId('total-ex')
     const balance = docId('total-balance')
     const warningEx = docId('warning-ex') 
+    const warningOfNegative = docId('warning-ex-2')
     
     // expenses id
     
@@ -23,6 +24,10 @@ docId('calculate-btn').addEventListener('click', function () {
         if(expense.value == ''){
             expense.value = 0
         }
+       else if( expense.value < 0){
+        warningOfNegative.style.display = "block"
+        expense.value = 0
+       }
     }
     
     expenses = parse(food) + parse(rent) + parse(clothes)
@@ -35,7 +40,6 @@ docId('calculate-btn').addEventListener('click', function () {
         warningEx.style.display = "block"
         balance.innerText = 0
     }
-    
 })
 
 // savings
