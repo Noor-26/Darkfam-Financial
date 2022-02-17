@@ -3,29 +3,27 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
-.input-field{
-    background-color: #DCDCDC;
-    border: none;
-    
+.display{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .money-part{
     background-color: #e6e6e6;
 }
-.text{
-    text-align: justify;
+.input-field{
+    background-color: #DCDCDC;
+    border: none;
 }
+
+
 .saving{
     width: 20%;
-    
 }
 #saving{
     width: 50%;
 }
-.display{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+
 .btn{
     color: white;
     background-color: #0dcaf0;
@@ -34,6 +32,7 @@ body{
     background-color: white;
     color: aqua;
 }
+
 .text-danger{
     display: none;
 }
