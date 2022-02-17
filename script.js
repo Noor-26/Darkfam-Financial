@@ -54,4 +54,12 @@ docId('save-btn').addEventListener('click', function () {
         isSaving.innerText = 0
     }
     
+    // warning text of saving
+
+    const warningOfSave = docId('warning-save');
+    if (saveAmount > incomeParse) {
+        warningOfSave.style.display = "block"
+        isSaving.innerText = 0
+    }
+    
 })
