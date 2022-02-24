@@ -50,6 +50,8 @@ docId('calculate-btn').addEventListener('click', function () {
 docId('save-btn').addEventListener('click', function () {
     const save = docId('saving')
     const isSaving = docId('saving-amount')
+    const totalBalance = docId('total-balance')
+    const remaingBalance = docId('balance');
     const saveparsent = parse(save)
     const incomeParse = parse(income)
     const saveAmount =(incomeParse* saveparsent) / 100
@@ -62,20 +64,20 @@ docId('save-btn').addEventListener('click', function () {
     
     // warning text of saving
     const warningOfSave = docId('warning-save');
-    if (saveAmount > incomeParse) {
+
+    
+    // remaing part
+    remaingBalance.innerText = totalBalance.innerText - isSaving.innerText
+    const remainParse =parseFloat(remaingBalance.innerText)
+    
+    if (saveAmount > remainParse) {
         warningOfSave.style.display = "block"
         isSaving.innerText = 0
+        remaingBalance.innerText = 0
     }
     else{
         warningOfSave.style.display = "none"
     }
-
-    // remaing part
-   const totalBalance = docId('total-balance')
-   const remaingBalance = docId('balance');
-
-   remaingBalance.innerText = totalBalance.innerText - isSaving.innerText
-  
 })
 function docId (idName){
     return document.getElementById(idName)
